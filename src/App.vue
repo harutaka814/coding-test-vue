@@ -5,7 +5,6 @@
   </div>
 </template>
 <script>
-// @ is an alias to /src
 import Navigation from "@/components/Navigation.vue";
 
 export default {
@@ -16,14 +15,16 @@ export default {
 };
 </script>
 <style lang="sass">
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css)
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&display=swap')
 #app
-  font-family: Noto Sans JP
-  background: #f5f5f5
+  font-family: 'Noto Sans JP', sans-serif
+  font-style: normal
+  font-weight: normal
+  background: $background-color
   margin: auto
-  padding: none
-  width: 375px
+  width: 100%
+  max-width: 375px
 body
-  margin-top: none !important
-  background: #f5f5f5
+  background: $background-color
+  margin: 0px
 </style>

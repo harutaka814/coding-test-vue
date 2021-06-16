@@ -34,10 +34,15 @@ export default new Vuex.Store({
       const res = await axios.get(
         "https://ispec-test.microcms.io/api/v1/photo",
         {
-          headers: { "x-api-key": "b279aadc-834e-4977-80e2-e7ba2c825bb7" },
+          headers: { "x-api-key": process.env.VUE_APP_X_API_KEY },
         }
       );
       context.commit("increment", res.data.contents);
+    },
+  },
+  getters: {
+    getPhotos: (state) => {
+      return state.photos.sort((a, b) => a.displayOrder - b.displayOrder);
     },
   },
   modules: {},
